@@ -1,6 +1,13 @@
 import AcmeLogo from '@/app/ui/acme-logo';
 import LoginForm from '@/app/ui/login-form';
 import { Suspense } from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Login | Acme',
+  description: 'The official Next.js Course Login, built with App Router.',
+  metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
+}
  
 export default function LoginPage() {
   return (
