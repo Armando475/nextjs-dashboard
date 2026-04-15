@@ -6,8 +6,9 @@ import {redirect} from 'next/navigation';
 import Form from '../ui/invoices/create-form';
 import {signIn} from '@/auth';
 import {AuthError} from 'next-auth';
+import { env } from './env';
 
-const sql = postgres(process.env.POSTGRES_URL!, {ssl: 'require'});
+const sql = postgres(env.NEW_POSTGRES_URL, {ssl: 'require'});
 
 const FormSchema = z.object({
     id: z.string(),
